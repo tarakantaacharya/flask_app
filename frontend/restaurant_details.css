@@ -1,0 +1,217 @@
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Light Theme (Default) */
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8f9fa;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+        
+        /* Dark Theme */
+        body.dark-theme {
+            background: #1a1a1a;
+            color: #fff;
+        }
+        
+        /* Container for all content */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: background 0.3s ease;
+        }
+        
+        /* Dark theme adjustments */
+        .dark-theme .container {
+            background: #2a2a2a;
+        }
+        
+        /* Header styling */
+        .header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        /* Restaurant Name */
+        .restaurant-name {
+            font-size: 36px;
+            font-weight: bold;
+            color: #ff4500;
+        }
+        
+        /* Adjust color in dark theme */
+        .dark-theme .restaurant-name {
+            color: #ff865a;
+        }
+        
+        /* Cuisines & Address */
+        .cuisines, .address, .open-status {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        
+        .dark-theme .cuisines,
+        .dark-theme .address,
+        .dark-theme .open-status {
+            color: #ddd;
+        }
+        
+        /* Ratings Section */
+        .ratings {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        
+        .rating-item {
+            font-size: 18px;
+            color: #333;
+        }
+        
+        .dark-theme .rating-item {
+            color: #fff;
+        }
+        
+        /* Image Container */
+        .image-container {
+            width: 100%;
+            max-height: 400px;
+            overflow: hidden;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 10px;
+        }
+        
+        /* Details Section */
+        .details {
+            width: 100%;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+        
+        .dark-theme .details {
+            background: #333;
+            color: #fff;
+        }
+        
+        /* Detail Items */
+        .detail-item {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .dark-theme .detail-item {
+            color: #ddd;
+        }
+        
+        /* Back Button */
+        .back-btn {
+            padding: 12px 25px;
+            background: #ff4500;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background 0.3s;
+        }
+        
+        .back-btn:hover {
+            background: #d33a00;
+        }
+        
+        /* Theme Toggle Buttons */
+        .theme-toggle-container {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+        
+        .theme-toggle-container button {
+            margin-bottom: 10px;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
+        }
+        
+        #light-theme-btn {
+            background: #fff;
+            color: #000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        
+        #dark-theme-btn {
+            background: #333;
+            color: #fff;
+        }
+        
+        #light-theme-btn:hover {
+            background: #f1f1f1;
+        }
+        
+        #dark-theme-btn:hover {
+            background: #444;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                text-align: center;
+            }
+        
+            .ratings {
+                align-items: center;
+                margin-top: 10px;
+            }
+        
+            .detail-item {
+                flex-direction: column;
+                text-align: center;
+            }
+        
+            .theme-toggle-container {
+                top: 10px;
+                right: 10px;
+            }
+        }
+        
