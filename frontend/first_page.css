@@ -1,0 +1,105 @@
+    /* Background image */
+    body {
+        background-image: url('https://storage.googleapis.com/background-tarak/cd867dbcd742b6cf022939a4a455ba05.jpg'); /* Replace with your image URL */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 80vh;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    #main-container {
+        border : 2px solid black;
+        padding : 20px;
+        width : 50%;
+        background-color: white;
+        border-radius: 20px;
+    }
+    /* Container for theme buttons */
+    .theme-toggle-container {
+        display: flex;
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: flex-end; /* Align buttons to the right */
+        position: fixed; /* Fixed position to stay on the screen */
+        top: 20px; /* Adjust top spacing */
+        right: 20px; /* Keep it at the right corner */
+        z-index: 1000;
+    }
+    #page-title {
+        margin-top : 200px;
+    }
+    /* Additional styles for suggestion box */
+    #suggestion-box {
+        position: absolute;
+        background: white;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        max-height: 200px;
+        overflow-y: auto;
+        width: calc(100% - 40px);
+        display: none; /* Hidden by default */
+        z-index: 1000;
+        top: 100%;
+    }
+    .suggestion-item {
+        padding: 10px;
+        cursor: pointer;
+    }
+    .suggestion-item:hover {
+        background: #f0f0f0; /* Highlight on hover */
+    }
+    .location-button {
+        margin-left: 10px;
+    }
+    /* #restaurant-list {
+        margin-top: 20px;
+    } */
+    .restaurant-item {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    /* Title and footer styles */
+    /* Title and footer styles */
+    .title {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        color: white;
+        font-size: clamp(1.5rem, 2.5vw + 1rem, 3rem); /* Responsive font size */
+        z-index: 1000;
+        font-weight: bold;
+    }
+    .footer {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        font-size: 1rem;
+        z-index: 1000;
+    }
+    /* Image above "Powered by Zomato" */
+    .footer img {
+        width: 100px; /* Adjust the size as needed */
+        margin-bottom: 5px; /* Space between image and text */
+    }
+    .restaurant-item.card {
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        transition: transform 0.2s;
+    }
+
+    .restaurant-item.card:hover {
+        transform: translateY(-2px);
+    }
+
+    .restaurant-meta {
+        margin-top: 1rem;
+    }
+
+    .badge {
+        margin-right: 0.5rem;
+    }
